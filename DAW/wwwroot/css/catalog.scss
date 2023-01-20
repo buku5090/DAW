@@ -1,0 +1,96 @@
+// Importing variables
+@import 'variables.scss';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+        grid-column: 1/-1;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & > a {
+            text-decoration: none;
+            text-align: start;
+        }
+
+        &--title {
+            color: $gray-800;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        &--description {
+            color: $gray-700;
+        }
+
+        &--data {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: $gray-500;
+            font-style: italic;
+            font-size: .8125rem;
+
+            & > svg {
+
+                fill: $gray-500;
+                width: 1rem;
+            }
+        }
+    }
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            text-decoration: none;
+        }
+    }
+
+    &__image {
+        &--title {
+            color: $gray-800;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        &--text, &--notes {
+            color: $gray-700;
+            font-weight: 400;
+        }
+
+        &--notes {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 0.8125rem;
+            margin-top: 1rem;
+            margin-bottom: .5rem;
+        }
+    }
+}
+

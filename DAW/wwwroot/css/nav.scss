@@ -1,0 +1,99 @@
+// Importing variables
+@import 'variables.scss';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.main-header {
+    margin-bottom: .5rem;
+}
+
+.header {
+    &__logo {
+        width: 33%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        & > img {
+            height: 50px;
+        }
+    }
+
+    &__container {
+        width: 80%;
+        max-width: 1300px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__search {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 33%;
+
+        &--form {
+            display: flex;
+            position: relative;
+            height: 60%;
+            width: 70%;
+        }
+
+        &--input {
+            border-radius: 20px;
+            padding-left: 1rem;
+            padding-right: 3rem;
+            border-right: none;
+            border: none;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &--submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $gray-500;
+            position: absolute;
+            height: 100%;
+            width: 2.25rem;
+            right: 0;
+
+            border: none;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: $teal;
+            }
+        }
+    }
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    background-color: $gray-200;
+    border-bottom: 1px solid $gray-500;
+}
+
+svg {
+    height: 60%;
+    fill: $white;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    font-size: 1.25rem;
+    color: $gray-800;
+
+    &:hover {
+        color: $teal;
+    }
+}
+
+/* @media (max-width: 1200px) {
+    .main-header {
+        background-color: red;
+    }
+} */

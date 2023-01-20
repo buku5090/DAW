@@ -1,0 +1,19 @@
+// Importing variables
+@import 'variables.scss';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.container {
+    max-width: 960px;
+    padding-top: 1rem;
+    background-color: $white;
+    display: flex;
+}
+
+.main-container {
+    display: grid;
+    flex-basis: 60%;
+}
+
+.main-aside {
+    flex-basis: 30%;
+}
